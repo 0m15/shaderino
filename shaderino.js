@@ -107,15 +107,10 @@ function shaderino(canvasEl, fs) {
     }
 
     let time = 0
-    function update() {
-        
-    }
-
     let rafId
     let looping = false
 
     function update() {
-        
         if (!looping) {
             return
         }
@@ -124,7 +119,6 @@ function shaderino(canvasEl, fs) {
 
         // Set time uniform
         gl.uniform1f(timeUniformLocation, time)
-        
         draw()
         
         rafId = requestAnimationFrame(function () {
