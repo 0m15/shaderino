@@ -115,7 +115,6 @@ function shaderino(canvasEl, fs) {
     let looping = false
 
     function update() {
-        console.log('update')
         
         if (!looping) {
             return
