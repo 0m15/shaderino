@@ -37,7 +37,7 @@ function createProgram(gl, vertexShader, fragmentShader) {
     gl.deleteProgram(program)
 }
 
-function minishader(canvasEl, fs) {
+function shaderino(canvasEl, fs) {
     let gl = canvas.getContext("webgl")
 
     if (!gl) {

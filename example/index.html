@@ -57,13 +57,13 @@ void main() {
     <script>
         (function () {
             let fsEl = document.getElementById('fs')
-            let ms = minishader(document.getElementById('canvas'), fsEl.value)
+            let ms = shaderino(document.getElementById('canvas'), fsEl.value)
             ms.draw()
 
             fsEl.addEventListener('input', function() {
                 ms.stop()
 
-                ms = minishader(document.getElementById('canvas'), fsEl.value)
+                ms = shaderino(document.getElementById('canvas'), fsEl.value)
                 ms.draw()
             })
         })()
