@@ -9,9 +9,9 @@ See `examples/index.html` for a working shader.
 
 Just import shaderino in your page, and use it like this:
 
-    let fsEl = document.getElementById('fs')
-    let ms = shaderino(document.getElementById('canvas'), fsEl.value)
-    ms.draw()
+    let fs = `your fragment shader goes here`
+    let sh = shaderino(document.getElementById('canvas'), fs)
+    sh.draw()
 
 Then shaderino will automatically update in a loop.
 
