@@ -5,7 +5,7 @@ http://shaderino.netlify.com
 
 ## Usage
 
-See `examples/index.html` for a working shader.
+See `examples/index.html` for a running example or head to http://shaderino.netlify.com.
 
 Just import shaderino in your page, and use it like this:
 
