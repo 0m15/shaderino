@@ -1,7 +1,6 @@
 # s h a d e r i n o
 
 A little glsl fragment shader viewer with no dependencies.
-http://shaderino.netlify.com
 
 ## Usage
 
