@@ -14,6 +14,13 @@ Just import shaderino in your page, and use it like this:
 
 Then shaderino will automatically update in a loop.
 
+## Available uniforms
+
+By now shaderino provides you two uniforms:
+
+    u_resolution        Canvas size in pixel
+    u_time              Elapsed time
+
 ## TODO
 
 - WebVR
@@ -21,3 +28,4 @@ Then shaderino will automatically update in a loop.
 - WebComponents version
 - NPM package
 - Automatic builds
+- Handle user uniforms
