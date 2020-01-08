@@ -19,7 +19,7 @@ Then shaderino will automatically update in a loop.
 By now shaderino provides you two uniforms:
 
     vec2 u_resolution;        // Canvas size in pixel
-    float u_time;              // Elapsed time
+    float u_time;             // Elapsed time
 
 ## TODO
 
