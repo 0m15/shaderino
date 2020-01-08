@@ -7,13 +7,13 @@ http://shaderino.netlify.com
 
 See `examples/index.html` for a working shader.
 
-Just import minishader in your page, and use it like this:
+Just import shaderino in your page, and use it like this:
 
     let fsEl = document.getElementById('fs')
-    let ms = minishader(document.getElementById('canvas'), fsEl.value)
+    let ms = shaderino(document.getElementById('canvas'), fsEl.value)
     ms.draw()
 
-Then minishader will automatically update in a loop.
+Then shaderino will automatically update in a loop.
 
 ## TODO
 
