@@ -17,6 +17,8 @@ Then shaderino will automatically update in a loop.
 
 ## TODO
 
+- WebVR
 - React Component
 - WebComponents version
 - NPM package
+- Automatic builds
