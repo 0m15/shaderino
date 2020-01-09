@@ -42,6 +42,13 @@ let uniformsDef = [
 shaderino(canvas, fs, uniformsDef)
 ```
 
+By now, only these types are supported:
+
+- `float`
+- `vec2`
+- `vec3`
+- `vec4`
+
 Then `update` function will be called at each frame.
 Note: You'll have to declare the uniform in the fragment shader in order to use it.
 
