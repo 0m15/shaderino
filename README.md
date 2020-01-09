@@ -21,6 +21,24 @@ By now shaderino provides you two uniforms:
     vec2 u_resolution;        // Canvas size in pixel
     float u_time;             // Elapsed time
 
+## Custom uniforms
+
+You can define and pass custom uniforms like this:
+
+    let uniformsDef = [
+        {
+            type: 'vec2',
+            name: 'u_mouse',
+            value: [0, 0],
+            update: () => return [mouse.x, mouse.y]
+        }
+    ]
+
+    shaderino(canvas, fs, uniformsDef)
+
+Then `update` function will be called at each frame.
+
+
 ## TODO
 
 - WebVR
@@ -28,4 +46,4 @@ By now shaderino provides you two uniforms:
 - WebComponents version
 - NPM package
 - Automatic builds
-- Handle user uniforms
+- ~~Handle user uniforms~~ Allow more user uniforms
