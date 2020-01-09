@@ -49,7 +49,7 @@ Note: You'll have to declare the uniform in the fragment shader in order to use 
 
 - WebVR
 - React Component
-- WebComponents version
+- Custom Element (WebComponents)
 - NPM package
 - Automatic builds
 - ~~Handle user uniforms~~ Allow more user uniforms
