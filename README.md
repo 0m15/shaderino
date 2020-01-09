@@ -8,9 +8,11 @@ See `examples/index.html` for a running example or head to http://shaderino.netl
 
 Just import shaderino in your page, and use it like this:
 
-    let fs = `your fragment shader goes here`
-    let sh = shaderino(document.getElementById('canvas'), fs)
-    sh.draw()
+```javascript
+let fs = `your fragment shader goes here`
+let sh = shaderino(document.getElementById('canvas'), fs)
+sh.draw()
+```
 
 Then shaderino will automatically update in a loop.
 
@@ -18,26 +20,30 @@ Then shaderino will automatically update in a loop.
 
 By now shaderino provides you two uniforms:
 
-    vec2 u_resolution;        // Canvas size in pixel
-    float u_time;             // Elapsed time
+```glsl
+vec2 u_resolution;        // Canvas size in pixel
+float u_time;             // Elapsed time
+```
 
 ## Custom uniforms
 
 You can define and pass custom uniforms like this:
 
-    let uniformsDef = [
-        {
-            type: 'vec2',
-            name: 'u_mouse',
-            value: [0, 0],
-            update: () => return [mouse.x, mouse.y]
-        }
-    ]
+```javascript
+let uniformsDef = [
+    {
+        type: 'vec2',
+        name: 'u_mouse',
+        value: [0, 0],
+        update: () => return [mouse.x, mouse.y]
+    }
+]
 
-    shaderino(canvas, fs, uniformsDef)
+shaderino(canvas, fs, uniformsDef)
+```
 
 Then `update` function will be called at each frame.
-
+Note: You'll have to declare the uniform in the fragment shader in order to use it.
 
 ## TODO
 
