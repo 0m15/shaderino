@@ -1,6 +1,6 @@
 # s h a d e r i n o
 
-A little Webgl/glsl fragment shader viewer with no dependencies, made as an exercise to deep dive into webgl.
+A little Webgl/glsl fragment shader viewer with no dependencies, made as an exercise to better understand how webgl works.
 
 ## Usage
 
