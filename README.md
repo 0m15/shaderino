@@ -18,7 +18,7 @@ Then shaderino will automatically update in a loop.
 
 ## Available uniforms
 
-By now shaderino provides you two uniforms:
+Shaderino provides you two uniforms:
 
 ```glsl
 vec2 u_resolution;        // Canvas size in pixel
@@ -45,7 +45,7 @@ Then `update` function will be called at each frame.
 Note: You'll have to declare the uniform in the fragment shader in order to use it.
 
 ### Uniform types
-By now, only these types are supported:
+Right now, only these types are supported:
 
 - `float`
 - `vec2`
