@@ -7,7 +7,7 @@
         body {
             margin: 0;
             padding: 0;
-            font-family:monospace;
+            font-family: monospace;
         }
 
         body {
@@ -47,26 +47,48 @@
     </div>
     <div>
         <textarea id="fs">
+uniform vec2 u_mouse;
 void main() {
     vec2 st = gl_FragCoord.xy/u_resolution.xy;
-    gl_FragColor = vec4(sin(u_time), st.y, 1.0-st.y, 1.0);
+    gl_FragColor = vec4(u_mouse.x, u_mouse.y, 1.0-st.y, 1.0);
 }
         </textarea>
     </div>
     <script type="text/javascript" src="./shaderino.min.js"></script>
     <script>
         (function () {
-            let fsEl = document.getElementById('fs')
-            let ms = shaderino(document.getElementById('canvas'), fsEl.value)
-            ms.draw()
+            let canvasEl = document.getElementById('canvas')
+            let inputEl = document.getElementById('fs')
+            
+            let mouse = [0, 0]
+            let uniformsDef = [
+                {
+                    name: 'u_mouse',
+                    type: 'vec2',
+                    value: mouse,
+                    update: () => {
+                        return [(mouse[0] - canvas.offsetLeft) / canvas.width, mouse[1] / canvas.height]
+                    }
+                }
+            ]
 
-            fsEl.addEventListener('input', function() {
-                ms.stop()
+            let program = shaderino(canvasEl, inputEl.value, uniformsDef)
 
-                ms = shaderino(document.getElementById('canvas'), fsEl.value)
-                ms.draw()
+            document.addEventListener('mousemove', evt => {
+                mouse = [evt.clientX, evt.clientY]
             })
+
+            inputEl.addEventListener('input', function () {
+                program.stop()
+
+                program = shaderino(canvasEl, inputEl.value, uniformsDef)
+                program.start()
+            })
+
+            program.start()
+
         })()
     </script>
 </body>
+
 </html>
